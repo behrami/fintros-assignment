@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class StoriesControllerTest < ActionDispatch::IntegrationTest
+class TopStoriesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
