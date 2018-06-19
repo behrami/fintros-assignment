@@ -11,7 +11,7 @@ class AskStoriesController < ApplicationController
       single_story_hash = {}
       single_story_hash[:title] = single_response["title"]
       single_story_hash[:author] = single_response["by"]
-      single_story_hash[:url] = single_response["url"] #needs changing
+      single_story_hash[:url] = "https://news.ycombinator.com/item?id=#{ask_response[i]}"
       single_story_hash[:comments_num] = single_response["descendants"]
       single_story_hash[:score] = single_response["score"]
       single_story_hash[:time] = single_response["time"]

@@ -1,10 +1,12 @@
-TOP STORIES
+<div class= 'container'>
+  TOP STORIES
 
-<ol>
+  <ol>
   <% @top_stories_array.each do |story_hash| %>
     <li>
       <%= link_to(story_hash[:title], story_hash[:url]) %><br>
       <%= story_hash[:score]%> points by <%= story_hash[:author]%> | <%= story_hash[:comments_num]%> comments
     </li>
   <% end %>
-</ol>
+  </ol>
+</div>

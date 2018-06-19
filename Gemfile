@@ -21,9 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # HTTPARTY FOR API CALLS
 gem 'httparty'
-#BOOTSTRAP
-gem 'bootstrap', '~> 4.1.1'
-#Jquery
+#Jquery for ajax
  gem 'jquery-rails'
 
 # Use CoffeeScript for .coffee assets and views
