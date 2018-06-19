@@ -1,1 +1,10 @@
 TOP STORIES
+
+<ul>
+  <% @top_stories_array.each do |story_hash| %>
+    <li>
+      <%= story_hash[:title] %><br>
+      <%= story_hash[:score]%> points by <%= story_hash[:author]%> | <%= story_hash[:comments_num]%> comments
+    </li>
+  <% end %>
+</ul>
