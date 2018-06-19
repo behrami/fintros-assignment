@@ -2,12 +2,11 @@ class TopStoriesController < ApplicationController
 
   def index
     top_response = HTTParty.get("https://hacker-news.firebaseio.com/v0/topstories.json")
-    top_body = JSON.parse(top_response.body)
 
     @top_stories_array=[]
     i=0
     30.times do #restrict to 30 for now
-      single_response = HTTParty.get("https://hacker-news.firebaseio.com/v0/item/#{top_body[i]}.json")
+      single_response = HTTParty.get("https://hacker-news.firebaseio.com/v0/item/#{top_response[i]}.json")
 
       single_story_hash = {}
       single_story_hash[:title] = single_response["title"]
