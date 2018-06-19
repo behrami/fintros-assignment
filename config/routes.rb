@@ -3,4 +3,8 @@ Rails.application.routes.draw do
 
   root 'top_stories#index'
   resources :top_stories, only: %i[index]
+  resources :new_stories, only: %i[index]
+  resources :show_stories, only: %i[index]
+  resources :ask_stories, only: %i[index]
+  resources :job_stories, only: %i[index]
 end
