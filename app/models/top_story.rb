@@ -1,0 +1,2 @@
+class TopStory < ApplicationRecord
+end
