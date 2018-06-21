@@ -5,7 +5,7 @@ class JobStoriesController < ApplicationController
 
     @job_stories_array=[]
     i=0
-    job_response.each do #restrict to 30 for now
+    job_response.each do
       single_response = HTTParty.get("https://hacker-news.firebaseio.com/v0/item/#{job_response[i]}.json")
 
       single_story_hash = {}
@@ -29,7 +29,7 @@ class JobStoriesController < ApplicationController
       else
         single_story_hash[:time] = "#{seconds} seconds ago"
       end
-      
+
       @job_stories_array.push(single_story_hash)
       i+=1
     end

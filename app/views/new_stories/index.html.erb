@@ -1,16 +1,8 @@
 <div class= 'container'>
   NEW STORIES
 
-  <ol>
-  <% @new_stories_array.each do |story_hash| %>
-    <li>
-      <span class = 'title'>
-        <%= link_to(story_hash[:title], story_hash[:url]) %>
-      </span><br>
-      <span class = 'extraInfo'>
-      <%= story_hash[:score]%> points by <%= story_hash[:author]%> | <%= story_hash[:time]%> | <%= link_to("#{story_hash[:comments_num]} comments", "https://news.ycombinator.com/item?id=#{story_hash[:id]}")%>
-      </span>
-    </li>
-  <% end %>
+  <ol id = 'storyList'>
+    <%= render partial: "stories"  %>
   </ol>
+
 </div>
