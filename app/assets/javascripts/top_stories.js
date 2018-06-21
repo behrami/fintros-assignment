@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded',function(){
 
   var stories = document.getElementById('storyList');
 
-  $(window).scroll(function() {
+  window.addEventListener('scroll', function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
       console.log('fetching stories');
-      alert('Pleace wait while we are fetching more stories');
+      alert('Pleace wait. We are fetching more stories.');
 
       var request = $.ajax({
                         		url: '/top_stories',
@@ -16,14 +16,10 @@ document.addEventListener('DOMContentLoaded',function(){
       request.done(function(data){
        console.log('stories displayed');
 
-       // for(i=0; i<data.length; i++){
-       //   var li = document.createElement('li');
-       //   li.append(data[i].title);
-       //   $(stories).append(li);
-       // }
        $(stories).append(data);
     	})
 
    }
  });
+
 })

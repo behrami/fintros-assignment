@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FintrosAssignment</title>
+    <title>Hacker News</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -15,27 +15,27 @@
   </head>
 
   <div class= 'container' id='navbar'>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ef6e0b;">
+  <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #ef6e0b;">
   <a class="navbar-brand" href="/top_stories"> <%= image_tag("https://news.ycombinator.com/y18.gif")%> Hacker News</a>
 
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" href="/new_stories">new</a>
+        <a class="nav-link" id='new' href="/new_stories">new</a>
       </li>|
       <li class="nav-item">
-        <a class="nav-link" href="https://news.ycombinator.com/newcomments">comments</a>
+        <a class="nav-link" id='comments' href="https://news.ycombinator.com/newcomments">comments</a>
       </li>|
       <li class="nav-item">
-        <a class="nav-link" href="/show_stories">show</a>
+        <a class="nav-link" id='show' href="/show_stories">show</a>
       </li>|
       <li class="nav-item">
-        <a class="nav-link" href="/ask_stories">ask</a>
+        <a class="nav-link" id='ask' href="/ask_stories">ask</a>
       </li>|
       <li class="nav-item">
-        <a class="nav-link" href="/job_stories">jobs</a>
+        <a class="nav-link" id='jobs' href="/job_stories">jobs</a>
       </li>|
       <li class="nav-item">
-        <a class="nav-link" href="https://news.ycombinator.com/submit">submit</a>
+        <a class="nav-link" id='submit' href="https://news.ycombinator.com/submit">submit</a>
       </li>
       <li class="nav-item" id='login'>
         <a class="nav-link" href="https://news.ycombinator.com/login?goto=newest">login</a>

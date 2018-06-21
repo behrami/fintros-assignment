@@ -4,7 +4,7 @@
       <%= link_to(story[:title], story[:url]) %>
     </span><br>
     <span class = 'extraInfo'>
-      <%= story[:score]%> points by <%= story[:author]%> | <%= link_to("#{story[:comments_num]} comments", "https://news.ycombinator.com/item?id=#{story[:id]}")%>
+      <%= story[:score]%> points by <%= story[:author]%> | <%= story[:time]%> | <%= link_to("#{story[:comments_num]} comments", "https://news.ycombinator.com/item?id=#{story[:id]}")%>
     </span>
   </li>
 <% end %>
