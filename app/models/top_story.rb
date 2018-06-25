@@ -46,11 +46,11 @@ class TopStory < ApplicationRecord
     @stories_stored=value
   end
 
-  def self.top_stories_array_calc(top_stories)
+  def self.stories_array_calc(stories)
     i=0
-    top_stories_array=[]
-    top_stories.each do
-      single_response = HTTParty.get("https://hacker-news.firebaseio.com/v0/item/#{top_stories[i]}.json")
+    stories_array=[]
+    stories.each do
+      single_response = HTTParty.get("https://hacker-news.firebaseio.com/v0/item/#{stories[i]}.json")
 
       @single_story_hash = {}
       @single_story_hash[:response_id] = single_response["id"]
@@ -62,11 +62,11 @@ class TopStory < ApplicationRecord
 
       time_calculation(single_response)
 
-      top_stories_array.push(@single_story_hash)
+      stories_array.push(@single_story_hash)
 
       i+=1
     end
-    return top_stories_array
+    return stories_array
 
   end
 
