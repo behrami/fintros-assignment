@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded',function(){
   var stories = document.getElementById('storyList');
 
   window.addEventListener('scroll', function() {
-   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+   if($(stories) && $(window).scrollTop() + $(window).height() == $(document).height()) {
       console.log('fetching stories');
-      alert('Pleace wait. We are fetching more stories.');
+      // alert('Pleace wait. We are fetching more stories.');
 
       var request = $.ajax({
                         		url: '/top_stories',

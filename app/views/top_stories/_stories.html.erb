@@ -1,4 +1,4 @@
-<% @top_stories_array.each do |story| %>
+<% TopStory.stories_display.each do |story| %>
   <li>
     <span class = 'title'>
       <%= link_to(story[:title], story[:url]) %>

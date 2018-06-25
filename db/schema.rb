@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20180620024533) do
   enable_extension "plpgsql"
 
   create_table "top_stories", force: :cascade do |t|
+    t.integer "response_id"
     t.string "title"
     t.string "author"
     t.string "url"
