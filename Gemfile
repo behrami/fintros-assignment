@@ -23,8 +23,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'httparty'
 #Jquery for ajax
  gem 'jquery-rails'
- #multiple pages
- gem 'will_paginate'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
